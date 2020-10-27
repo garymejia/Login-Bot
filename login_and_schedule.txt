@@ -1,0 +1,10 @@
+<---------------------------------------------FORM(fill out below)------------------------------------------>
+username:youremail@student.ccp.edu
+password:yourpassword
+
+Monday:9:00-14:00
+Tuesday:
+Wednesday:15:00-20:00
+Thursday:
+Friday:11:00-16:00
+Saturday:11:00-15:00
