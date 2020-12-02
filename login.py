@@ -93,7 +93,7 @@ class Login:
                 print(self.countdown.seconds)
                 print("Time left before next clock-in/clock-out", self.countdown)
                 print("Bot is sleeping....")
-                time.sleep(self.countdown.seconds)                     #sleeps program until execution
+                #time.sleep(self.countdown.seconds)                     #sleeps program until execution
                 self.sign_in()
                 print("Bot has clocked-in/clocked-out")
                 break
@@ -113,11 +113,6 @@ class Login:
         driver.find_element_by_name('scheduleid').click()
         driver.find_element_by_name('login').click()
         driver.find_element_by_class_name('tooltip3b').click()
-        try:
-            driver.find_element_by_name('submit').click()
-            print("Clocked-in/Clocked-out")
-        except:
-            print("Failed")
 
         time.sleep(10)
         driver.close()
