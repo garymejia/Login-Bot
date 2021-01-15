@@ -11,7 +11,7 @@ class Time_Widgets(tk.Frame):
         self.master = master
     def group_time_widgets(self):
         self.in_entry = tk.Entry(self.master, width = entryWidthSize)
-        self.colon_label = tk.Label(self.master, text=":", bg=backgroundColor, fg="white")
+        self.colon_label = tk.Label(self.master, text=" - ", bg=backgroundColor, fg="white")
         self.out_entry = tk.Entry(self.master, width= entryWidthSize)
         self.in_entry.grid(row=0, column= 1, sticky=W, pady =3)
         self.colon_label.grid(row = 0, column = 2, sticky=W, pady = 3)
@@ -36,22 +36,43 @@ class Login_Gui(tk.Frame):
         """
         
         self.mon_label = tk.Label(self.master, text="Monday", bg="grey", fg="white")
-        frame1 = tk.Frame(self.master, height = 100, width=100,bg=backgroundColor, borderwidth = 2)
-        frame1.grid(row =0, column = 1, sticky = W, pady = 1)
-        group = Time_Widgets(master = frame1)
+        mon_frame = tk.Frame(self.master, height = 100, width=100,bg=backgroundColor, borderwidth = 2)
+        mon_frame.grid(row =0, column = 1, sticky = W, pady = 1)
+        group = Time_Widgets(master = mon_frame)
+        group.group_time_widgets()
+
+        self.tues_label = tk.Label(self.master, text="Tuesday", bg="grey", fg="white")
+        tues_frame = tk.Frame(self.master, height = 100, width=100,bg=backgroundColor, borderwidth = 2)
+        tues_frame.grid(row =1, column = 1, sticky = W, pady = 1)
+        group = Time_Widgets(master = tues_frame)
+        group.group_time_widgets()
+
+        self.wed_label = tk.Label(self.master,text = "Wednesday", bg = "grey", fg="white")
+        wed_frame = tk.Frame(self.master, height = 100, width=100,bg=backgroundColor, borderwidth = 2)
+        wed_frame.grid(row =2, column = 1, sticky = W, pady = 1)
+        group = Time_Widgets(master = wed_frame)
+        group.group_time_widgets()
+
+        self.thur_label = tk.Label(self.master,text = "Thursday", bg = "grey", fg="white")
+        thurs_frame = tk.Frame(self.master, height = 100, width=100,bg=backgroundColor, borderwidth = 2)
+        thurs_frame.grid(row =3, column = 1, sticky = W, pady = 1)
+        group = Time_Widgets(master = thurs_frame)
+        group.group_time_widgets()
+
+        self.fri_label = tk.Label(self.master,text = "Friday", bg = "grey", fg="white")
+        fri_frame = tk.Frame(self.master, height = 100, width=100,bg=backgroundColor, borderwidth = 2)
+        fri_frame.grid(row =4, column = 1, sticky = W, pady = 1)
+        group = Time_Widgets(master = fri_frame)
+        group.group_time_widgets()
+
+        self.sat_label = tk.Label(self.master,text = "Saturday", bg = "grey", fg="white")
+        sat_frame = tk.Frame(self.master, height = 100, width=100,bg=backgroundColor, borderwidth = 2)
+        sat_frame.grid(row =5, column = 1, sticky = W, pady = 1)
+        group = Time_Widgets(master = sat_frame)
         group.group_time_widgets()
 
 
-        self.tues_label = tk.Label(self.master, text="Tuesday", bg="grey", fg="white")
-
-        self.wed_label = tk.Label(self.master,text = "Wednesday", bg = "grey", fg="white")
-        
-        self.thur_label = tk.Label(self.master,text = "Thursday", bg = "grey", fg="white")
-        self.fri_label = tk.Label(self.master,text = "Friday", bg = "grey", fg="white")
-        self.sat_label = tk.Label(self.master,text = "Saturday", bg = "grey", fg="white")
-
-
-        #position labels for days on grid 
+        #position day labels on grid 
         self.mon_label.grid(row = 0, column=0, sticky=W, pady=3)  
         self.tues_label.grid(row=1, column= 0, sticky=W, pady = 3)
         self.wed_label.grid(row=2, column= 0, sticky=W, pady = 3)
