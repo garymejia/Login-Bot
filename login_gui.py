@@ -47,23 +47,16 @@ class Login_Gui(tk.Frame):
         self.wed_label = tk.Label(self.master,text = "Wednesday", bg = "grey", fg="white")
         
         self.thur_label = tk.Label(self.master,text = "Thursday", bg = "grey", fg="white")
-
         self.fri_label = tk.Label(self.master,text = "Friday", bg = "grey", fg="white")
-        
         self.sat_label = tk.Label(self.master,text = "Saturday", bg = "grey", fg="white")
 
-        #organization of widgets into grid layout        
-        #pady are spaces in the horizontal vertex 
-        self.mon_label.grid(row = 0, column=0, sticky=W, pady=3)
-       
+
+        #position labels for days on grid 
+        self.mon_label.grid(row = 0, column=0, sticky=W, pady=3)  
         self.tues_label.grid(row=1, column= 0, sticky=W, pady = 3)
-        
         self.wed_label.grid(row=2, column= 0, sticky=W, pady = 3)
-       
         self.thur_label.grid(row=3, column= 0, sticky=W, pady = 3)
-       
         self.fri_label.grid(row=4, column= 0, sticky=W, pady = 3)
-       
         self.sat_label.grid(row=5, column= 0, sticky=W, pady = 3)
        
         """frame1 = tk.Frame(self.master, height = 100, width=100,bg="WHITE", borderwidth = 2)
@@ -73,7 +66,7 @@ class Login_Gui(tk.Frame):
         """
         self.quit = tk.Button(self.master, text = "QUIT", fg = "red", command=self.master.destroy)
         self.quit.grid(row = 6, column=0, sticky=W, pady=2)
-        
+
 
 if __name__ == "__main__":   
     root = tk.Tk()
